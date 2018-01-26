@@ -1,0 +1,15 @@
+<template>
+    <div class="card">
+        <div class="card-header">
+            ${title}
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+                <a href="#dashboard" repeat.for="employee of employees" class="list-group-item list-group-item-action ${employee.id === $parent.selectedId ? 'active' : ''}"
+                    click.delegate="$parent.select(employee)">
+                    ${employee.name}
+                </a>
+            </div>
+        </div>
+    </div>
+</template>
